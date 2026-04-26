@@ -17,6 +17,7 @@ namespace AndromedaSignalLab {
         template<class T> inline T clamp(T x, T a, T b);
         template<class T> inline size_t numberOfDigits(T number);
         template<class T> inline int firstDigit(T number);
+        template<class T> T remapValue(T value, T minValue, T maxValue, T scaledMinValue, T scaledMaxValue);
         /**
          * Rounds given number by first n digits regardless point position
          * @param number Number to be rounded
@@ -108,5 +109,9 @@ namespace AndromedaSignalLab {
             return number/coeff;
         }
         return std::round(number);
+    }
+
+    template<class T> inline T MathUtil::remapValue(T value, T minValue, T maxValue, T scaledMinValue, T scaledMaxValue){
+        return scaledMinValue + (value - minValue) / (maxValue-minValue) * (scaledMaxValue - scaledMinValue);
     }
 }
