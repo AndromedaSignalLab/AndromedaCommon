@@ -1,5 +1,5 @@
 # - Find the FFTW library
-#
+# https://github.com/egpbos/findFFTW/
 # Original version of this file:
 #   Copyright (c) 2015, Wenzel Jakob
 #   https://github.com/wjakob/layerlab/blob/master/cmake/FindFFTW.cmake, commit 4d58bfdc28891b4f9373dfe46239dda5a0b561c6
@@ -169,7 +169,7 @@ else()
 
     find_library(
         FFTW_DOUBLE_LIB
-        NAMES "fftw3"
+        NAMES "fftw3" libfftw3-3
         PATHS ${PKG_FFTW_LIBRARY_DIRS} ${LIB_INSTALL_DIR}
         )
 
@@ -193,7 +193,7 @@ else()
 
     find_library(
         FFTW_FLOAT_LIB
-        NAMES "fftw3f"
+        NAMES "fftw3f" libfftw3f-3
         PATHS ${PKG_FFTW_LIBRARY_DIRS} ${LIB_INSTALL_DIR}
         )
 
@@ -217,7 +217,7 @@ else()
 
     find_library(
         FFTW_LONGDOUBLE_LIB
-        NAMES "fftw3l"
+        NAMES "fftw3l" libfftw3l-3
         PATHS ${PKG_FFTW_LIBRARY_DIRS} ${LIB_INSTALL_DIR}
         )
 
