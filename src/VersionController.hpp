@@ -10,7 +10,6 @@ You should have received a copy of the GNU General Public License along with thi
 */
 
 #pragma once
-#include <APIStructures.hpp>
 
 #include "AndromedaStructures.hpp"
 
