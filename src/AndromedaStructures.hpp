@@ -40,6 +40,11 @@ namespace AndromedaSignalLab {
         Bits32 = 32
     };
 
+    enum class AmplitudeMode:int {
+        Linear = 0,
+        Logarithmic = 1
+    };
+
     enum class ChannelMode:int {
         Mono = 1,
         Stereo = 2,
